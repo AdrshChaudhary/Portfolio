@@ -136,17 +136,17 @@ h2::selection {
 
 /* project 1 */
 .card:nth-child(1) {
-  background: url(../assets/project/project-one.png) center center/cover;
+  background: url(../assets/project/project-1.jpg) center center/cover;
 }
 
 /* Project 2 */
 .card:nth-child(2) {
-  background: url(../assets/project/project-two.png) center center/cover;
+  background: url(../assets/project/project-2.jpg) center center/cover;
 }
 
 /* Project 3 */
 .card:nth-child(3) {
-  background: url(../assets/project/project-three.png) center center/cover;
+  background: url(../assets/project/project-3.jpg) center center/cover;
 }
 
 /* Project 4 */
