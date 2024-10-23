@@ -162,6 +162,67 @@ body {
   background-color: var(--card-background);
   margin: 5.5rem 0;
 }
+/* Education Section */
+.education-container, .experience-container {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem auto;
+}
+
+.education-card, .experience-card {
+  background: var(--card-background);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.education-card h3, .experience-card h3 {
+  color: var(--text-color);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.education-card h4, .experience-card h4 {
+  color: var(--bg-secondary);
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.education-card h5, .experience-card h5 {
+  color: var(--text-color);
+  font-size: 0.9rem;
+  font-weight: var(--weight-small);
+  margin-bottom: 1rem;
+}
+
+.education-card ul, .experience-card ul {
+  list-style: disc;
+  margin-left: 1.2rem;
+  color: var(--text-color);
+}
+
+.education-card li, .experience-card li {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+.education-card, .experience-card, .project-card {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Projects */
 #projects {
   display: flex;
@@ -205,6 +266,38 @@ body {
   top: 160px;
   left: 10px;
 }
+.project-card {
+  background: var(--card-background);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.project-info {
+  margin-bottom: 1rem;
+}
+
+.project-info h3 {
+  color: var(--text-color);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-info h4 {
+  color: var(--bg-secondary);
+  font-size: 0.9rem;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.project-links .btn {
+  font-size: 0.8rem;
+  padding: 0.5rem 1rem;
+}
 
 /* Footer */
 #footer {
@@ -246,7 +339,21 @@ body {
 #footer p {
   font-size: 0.8rem;
 }
+.project-card {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-in-out forwards;
+}
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 /* Responsiveness */
 
 @media (max-width: 1000px) {
@@ -256,9 +363,31 @@ body {
   }
 }
 
+
 @media (max-width: 768px) {
+  .education-card, .experience-card, .project-card {
+    padding: 1rem;
+  }
+
+  .project-links {
+    flex-direction: column;
+  }
+
+  .project-links .btn {
+    width: 100%;
+    text-align: center;
+  }
 }
 
+@media (max-width: 300px) {
+  .education-card h3, .experience-card h3, .project-info h3 {
+    font-size: 1.1rem;
+  }
+
+  .education-card h4, .experience-card h4, .project-info h4 {
+    font-size: 0.85rem;
+  }
+}
 @media (max-width: 670px) {
   .navbar .nav-menu {
     position: fixed;

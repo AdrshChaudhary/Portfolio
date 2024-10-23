@@ -24,6 +24,9 @@
       property="twitter:image"
       content="https://user-images.githubusercontent.com/62628408/150613011-b78a7f5a-0af1-4312-aab0-0022e7258693.png"
     />
+    <meta name="description" content="Aadarsh Chaudhary - Data Science Portfolio">
+    <meta name="keywords" content="data science, machine learning, AI, portfolio">
+    <meta name="author" content="Aadarsh Chaudhary">
 
     <!-- Link -->
     <link
@@ -65,138 +68,175 @@
     />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/utilities.css" />
+    <title>Aadarsh Chaudhary | Portfolio</title>
   </head>
   <body>
-    <header id="hero">
-      <!-- Navbar -->
-      <nav class="navbar">
+    <!-- Navbar -->
+    <nav class="navbar">
         <div class="container">
-          <!-- Logo -->
-          <h1 id="logo">
-            <a href="#"
-              ><img src="./assets/logo.png" alt="Your Logo"
-            /></a>
-          </h1>
-          <!-- Navbar links -->
-          <ul class="nav-menu">
-            <li><a class="nav-link" href="#projects">PROJECTS</a></li>
-            <li><a class="nav-link" href="#footer">CONTACT</a></li>
-            <li>
-              <a
-                class="btn btn-secondary"
-                target="_blank"
-                href="https://drive.google.com/file/d/1wDNp1ye--O4tQMlrKDH7an-5XnPKxpO2/view?usp=sharing"
-                >RESUME <i class="fas fa-arrow-right"></i
-              ></a>
-            </li>
+            <h1 id="logo">
+                <a href="#hero">
+                    <img src="./assets/logo.png" alt="Your Logo">
+                </a>
+            </h1>
 
-            <!-- Toggle switch -->
-            <div class="theme-switch">
-              <input type="checkbox" id="switch" />
-              <label class="toggle-icons" for="switch">
-                <img class="moon" src="assets/moon.svg" />
-                <img class="sun" src="assets/sun.svg" />
-              </label>
+            <ul class="nav-menu">
+                <li><a href="#education" class="nav-link">EDUCATION</a></li>
+                <li><a href="#experience" class="nav-link">EXPERIENCE</a></li>
+                <li><a href="#projects" class="nav-link">PROJECTS</a></li>
+                <li><a href="#footer" class="nav-link">CONTACT</a></li>
+                <li>
+                    <a href="https://drive.google.com/file/d/1SxeQrodp0rqQlSi2QMP8837_PBd-HniN/view?usp=sharing" 
+                       class="btn btn-secondary" 
+                       target="_blank">
+                        RESUME
+                    </a>
+                </li>
+                <li>
+                    <div class="theme-switch">
+                        <input type="checkbox" id="switch">
+                        <label for="switch" class="toggle-icons">
+                            <img src="assets/moon.svg" alt="Dark Mode" class="moon">
+                            <img src="assets/sun.svg" alt="Light Mode" class="sun">
+                        </label>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
-            <!-- Hamburger menu -->
-          </ul>
-          <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </div>
         </div>
-      </nav>
+    </nav>
 
-      <section class="header-container">
-        <img
-          class="profile-image"
-          src="assets/profile-image.jpg"
-          alt=""
-        />
-        <h1>Hi I'm Aadarsh Chaudhary</h1>
-
-        <div class="content-text">
-          <h2>Data Science Enthusiast</h2>
-          
-
-          <p>
-            Hi there! I'm AADARSH CHAUDHARY, a driven and enthusiastic student with hands on experience in Machine Learning, AI and Data Science on a mission to delve deep into the world of data science.
-          </p>
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="section header-container">
+            <img src="assets/profile-image.jpg" alt="Aadarsh Chaudhary" class="profile-image">
+            <h1>Hi, I'm Aadarsh Chaudhary</h1>
+            <div class="content-text">
+                <h2>Data Science Enthusiast</h2>
+                <p>Hi there! I'm AADARSH CHAUDHARY, a driven and enthusiastic student with hands-on experience in Machine Learning, AI and Data Science on a mission to delve deep into the world of data science.</p>
+            </div>
+            <a href="https://www.linkedin.com/in/aadarshchaudhary/" class="btn btn-secondary" target="_blank">
+                Connect With Me
+            </a>
         </div>
-        <a
-          href="https://www.linkedin.com/in/aadarshchaudhary/"
-          class="btn btn-secondary"
-          target="_blank"
-          >Connect With Me</a
-        >
-      </section>
-    </header>
-
-    <!-- Projects -->
-    <section id="projects" class="project-container container">
-      <div class="division"></div>
-      <div class="content-text">
-        <h2>Projects</h2>
-        <p>Check out some of my personal projects</p>
-      </div>
-
-      <article class="project">
-        <!-- Project 1 -->
-        <a href="https://github.com/AdrshChaudhary/Stock-Prediction-with-Trading" target="_blank" class="card">
-          <div class="project-info">
-            <div class="project-bio">
-              <h3>Stock Prediction with Trading</h3>
-              <p>Numpy, Pandas, Scikit-learn, VectorBt, Alpaca</p>
-            </div>
-            <div class="project-link">
-            </div>
-          </div>
-        </a>
-
-        <!-- Project 2 -->
-        <a href="https://github.com/AdrshChaudhary/credit-card-fraud-detection" target="_blank" class="card">
-          <div class="project-info">
-            <div class="project-bio">
-              <h3>Credit Card Fraud Detection</h3>
-              <p>Numpy, Pandas, Scikit-learn</p>
-            </div>
-            <div class="project-link">
-            </div>
-          </div>
-        </a>
-
-        <!-- Project 3 -->
-        <a href="https://github.com/AdrshChaudhary/Supermarket-sales-prediction" target="_blank" class="card">
-          <div class="project-info">
-            <div class="project-bio">
-              <h3>Super Market Sales Prediction</h3>
-              <p>Numpy, Pandas, Matplotlib, Scipy, Seaborn, Scikit-learn</p>
-            </div>
-            <div class="project-link">
-            </div>
-          </div>
-        </a>
-      </article>
     </section>
 
+    <!-- Education Section -->
+    <section id="education" class="section education-container container">
+        <div class="division"></div>
+        <div class="content-text">
+            <h2>Education</h2>
+        </div>
 
+        <div class="education-card">
+            <h3>Bachelor of Technology in Electronics and Communication Engineering</h3>
+            <h4>Bharati Vidyapeeth's College of Engineering, New Delhi</h4>
+            <h5>2022 - 2026</h5>
+            <ul>
+                <li>CGPA: 7.7/10(Till 4th Sem)</li>
+                <li>Design Head @AthenaBVP</li>
+                <li>Video Editing Head @BVPCSI</li>
+            </ul>
+        </div>
+
+        <div class="education-card">
+            <h3>Higher Secondary Education</h3>
+            <h4>G.L.T Saraswati Bal Mandir, New Delhi</h4>
+            <h5>2019 - 2021</h5>
+            <ul>
+                <li>Percentage: 84%</li>
+                <li>Science Stream with Computer Science</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience-container container">
+        <div class="division"></div>
+        <div class="content-text">
+            <h2>Work Experience</h2>
+        </div>
+
+        <div class="experience-card">
+            <h3>AI Engineer Intern</h3>
+            <h4>SKXYWTF</h4>
+            <h5>June 2024 - September 2024</h5>
+            <ul>
+                <li>Designed and implemented machine learning algorithms and neural networks optimized for performance across various platforms.</li>
+                <li>Conducted performance testing and benchmarking of Web Applications and machine learning models.</li>
+                <li>Validated model accuracy, established testing protocols, and documented development processes.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section project-container container">
+        <div class="division"></div>
+        <div class="content-text">
+            <h2>Projects</h2>
+            <p>Check out some of my personal projects</p>
+        </div>
+
+        <div class="grid grid-3">
+            <div class="project-card card-shadow">
+                <div class="project-info">
+                    <h3>Stock Prediction with Trading</h3>
+                    <h4>Numpy, Pandas, Scikit-learn, VectorBt, Alpaca</h4>
+                </div>
+                <div class="project-links">
+                    <a href="https://stock-trading-with-backtesting.onrender.com" class="btn btn-primary" target="_blank">Live Demo</a>
+                    <a href="https://github.com/AdrshChaudhary/Stock_Trading_with_Backtesting" class="btn btn-secondary" target="_blank">GitHub</a>
+                </div>
+            </div>
+
+            <div class="project-card card-shadow">
+                <div class="project-info">
+                    <h3>Credit Card Fraud Detection</h3>
+                    <h4>Numpy, Pandas, Scikit-learn</h4>
+                </div>
+                <div class="project-links">
+                    <a href="" class="btn btn-primary" target="_blank">Live Demo</a>
+                    <a href="https://github.com/AdrshChaudhary/credit-card-fraud-detection" class="btn btn-secondary" target="_blank">GitHub</a>
+                </div>
+            </div>
+
+            <div class="project-card card-shadow">
+                <div class="project-info">
+                    <h3>Super Market Sales Prediction</h3>
+                    <h4>Numpy, Pandas, Matplotlib, Scipy, Seaborn, Scikit-learn</h4>
+                </div>
+                <div class="project-links">
+                    <a href="" class="btn btn-primary" target="_blank">Live Demo</a>
+                    <a href="https://github.com/AdrshChaudhary/Supermarket-sales-prediction" class="btn btn-secondary" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer id="footer">
-      <div class="container">
-        <h3>CONTACT ME</h3>
-        <!-- Social links -->
-        <div class="social">
-          <a href="mailto:im.aadrsh@gmail.com"
-            ><img src="./assets/mailico.svg"width="500" height="300" alt="Email"
-          /></a>
-          <a href="https://www.linkedin.com/in/aadarshchaudhary/" target="_blank"
-            ><img src="./assets/linkedin-icon.svg" alt="Linkedin"
-          /></a>
-          <a href="https://github.com/AdrshChaudhary" target="_blank"><img src="./assets/github-icon.svg" alt="GitHub" /></a>
+        <div class="container">
+            <h3>CONTACT ME</h3>
+            <div class="social">
+                <a href="mailto:im.aadrsh@gmail.com">
+                    <img src="./assets/mailico.svg" alt="Email" width="20" height="20">
+                </a>
+                <a href="https://www.linkedin.com/in/aadarshchaudhary/" target="_blank">
+                    <img src="./assets/linkedin-icon.svg" alt="LinkedIn" width="20" height="20">
+                </a>
+                <a href="https://github.com/AdrshChaudhary" target="_blank">
+                    <img src="./assets/github-icon.svg" alt="GitHub" width="20" height="20">
+                </a>
+            </div>
         </div>
-        </div>
-      </div>
     </footer>
+
+    <!-- JavaScript -->
     <script src="js/script.js"></script>
-  </body>
+</body>
 </html>
