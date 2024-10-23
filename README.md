@@ -17,6 +17,7 @@ You can view the live version of my portfolio at [https://aadrsh.netlify.app/](h
 - HTML
 - CSS
 - JavaScript
+- Netlify
 
 ## Installation
 
