@@ -17,7 +17,6 @@ You can view the live version of my portfolio at [https://aadrsh.netlify.app/](h
 - HTML
 - CSS
 - JavaScript
-- [Framework or Library Name (if applicable)] (e.g., React, Bootstrap, etc.)
 
 ## Installation
 
