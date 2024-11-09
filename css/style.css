@@ -31,6 +31,37 @@
   --width-large: 1300px;
 }
 
+
+
+.skills-container h2 {
+  font-size: 2rem;
+  text-align: center; /* Center align the title */
+  margin-bottom: 20px; /* Add space below the title */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.progress-bar {
+  width: 100%; /* Ensure full width */
+  height: 12px; /* Set a fixed height for all progress bars */
+  background-color: #ddd;
+  border-radius: 5px;
+  margin: 5px 0;
+  display: flex;
+  overflow: hidden;
+  justify-content: flex-start;
+}
+.progress-bar > div {
+  height: 100%;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  transition: width 0.4s
+}
+
 [data-theme="dark"] {
   --primary-color: #ffcd42;
   --secondary-color: #ffd35c;
@@ -166,14 +197,17 @@ body {
 .education-container, .experience-container {
   display: flex;
   flex-direction: column;
-  margin: 2rem auto;
+  margin: 0.5rem auto;
+}
+section {
+  scroll-margin-top: 100px; /* Adjust to navbar height */
 }
 
 .education-card, .experience-card {
   background: var(--card-background);
   padding: 1.5rem;
   border-radius: 8px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
   box-shadow: var(--shadow);
 }
 
@@ -206,7 +240,7 @@ body {
   font-size: 0.9rem;
   margin-bottom: 0.5rem;
 }
-.education-card, .experience-card, .project-card {
+.education-card, .experience-card {
   opacity: 0;
   transform: translateY(50px);
   animation: fadeInUp 1s ease forwards;
@@ -234,12 +268,11 @@ body {
   align-self: center;
   margin: 2rem 0;
 }
-
-.project {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(250px, auto);
-  grid-gap: 0.9rem;
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centers the cards */
+  gap: 20px; /* Adjust spacing between cards */
 }
 
 .card .project-bio p {
@@ -249,12 +282,32 @@ body {
 .card .project-bio h3 {
   font-size: 0.9rem;
 }
+.about-container {
+  padding-top: 130px; /* Navbar offset */
+  text-align: center;
+}
+
+.about-content {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1rem;
+  line-height: 1.6;
+  font-size: 1rem;
+  text-align: left;
+}
+header h1 {
+  text-align: center;
+  font-size: 2.5em;
+  margin-top: 20px;
+}
 
 .project-info {
-  display: flex;
-  justify-content: space-between;
+  top: 0px;
+  left: 20px;
+  z-index: 10;
   opacity: 0;
-  position: relative;
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
   transition: 0.5s ease-in-out;
 }
 
@@ -267,31 +320,30 @@ body {
   left: 10px;
 }
 .project-card {
-  background: var(--card-background);
-  padding: 1.5rem;
-  border-radius: 8px;
-  margin-bottom: 1.5rem;
-  box-shadow: var(--shadow);
-}
-
-.project-info {
-  margin-bottom: 1rem;
-}
-
-.project-info h3 {
-  color: var(--text-color);
-  font-size: 1.2rem;
+  width: 580px;
+  max-width: 580px; /* Adjust the width of the card */
+  height: 220px; /* Adjust the height */
+  background-size: cover; /* Ensure the background image covers the entire card */
+  background-position: center; /* Center the background image */
+  border-radius: 10px;
+  padding: 20px;
+  align-self: center;
+  align-items: center;
   margin-bottom: 0.5rem;
-}
-
-.project-info h4 {
-  color: var(--bg-secondary);
-  font-size: 0.9rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  color: white; /* Ensure text is readable over background */
 }
 
 .project-links {
+  position: absolute;
   display: flex;
-  gap: 1rem;
+  flex-wrap: wrap;
+  bottom: 10px;
+  left: 20px;
+  z-index: 10;
+  gap: 0.5rem;
 }
 
 .project-links .btn {
@@ -356,48 +408,55 @@ body {
 }
 /* Responsiveness */
 
-@media (max-width: 1000px) {
-  .project {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 
 
 @media (max-width: 768px) {
-  .education-card, .experience-card, .project-card {
+  .education-card, .experience-card{
     padding: 1rem;
   }
 
   .project-links {
     flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    width: 100%;
   }
 
   .project-links .btn {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
     width: 100%;
     text-align: center;
   }
 }
 
 @media (max-width: 300px) {
-  .education-card h3, .experience-card h3, .project-info h3 {
+  .education-card h3, .experience-card h3{
     font-size: 1.1rem;
   }
 
-  .education-card h4, .experience-card h4, .project-info h4 {
+  .education-card h4, .experience-card h4{
     font-size: 0.85rem;
   }
 }
+
+@media (max-width: 768px) {
+  .about-container {
+    padding-top: 100px;
+  }
+}
+
 @media (max-width: 670px) {
   .navbar .nav-menu {
     position: fixed;
     right: -100vw;
     top: 4.5rem;
+    z-index: 1000;
     flex-direction: column;
     width: calc(80% - 10px);
     transition: 0.3s;
     box-shadow: var(--shadow);
-    padding: 2rem;
+    padding: 1rem;
     border-radius: 5px;
     align-items: flex-start;
   }
@@ -408,7 +467,7 @@ body {
   }
 
   .nav-menu.active {
-    right: 20px;
+    right: 0;
   }
 
   .nav-menu .nav-link {
@@ -449,11 +508,20 @@ body {
     transform: translateY(-8px) rotate(-45deg);
   }
 }
+@media only screen and (max-width: 600px) {
+  .project-card, .experience-card, .education-card {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .navbar .nav-menu {
+    flex-direction: column;
+  }
+}
 
 @media (max-width: 600px) {
   .project {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 10fr;
   }
 
   .header-container .btn {

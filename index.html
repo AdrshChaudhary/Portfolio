@@ -4,26 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      property="og:image"
-      content="https://user-images.githubusercontent.com/62628408/150613011-b78a7f5a-0af1-4312-aab0-0022e7258693.png"
-    />
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta
-      property="twitter:url"
-      content="https://github.com/CommunityPro/portfolio-html"
-    />
-    <meta property="twitter:title" content="Portfolio Template - Open source" />
-    <meta
-      property="twitter:description"
-      content="Build or customize your portfolio website using this super easy template. Free to use if you are a member of the community or a contributor to this project"
-    />
-    <meta
-      property="twitter:image"
-      content="https://user-images.githubusercontent.com/62628408/150613011-b78a7f5a-0af1-4312-aab0-0022e7258693.png"
-    />
     <meta name="description" content="Aadarsh Chaudhary - Data Science Portfolio">
     <meta name="keywords" content="data science, machine learning, AI, portfolio">
     <meta name="author" content="Aadarsh Chaudhary">
@@ -117,9 +97,10 @@
             <img src="assets/profile.jpg" alt="Aadarsh Chaudhary" class="profile-image">
             <h1>Hi, I'm Aadarsh Chaudhary</h1>
             <div class="content-text">
-                <h2>Data Science Enthusiast</h2>
-                <p>Hi there! I'm AADARSH CHAUDHARY, a driven and enthusiastic student with hands-on experience in Machine Learning, AI and Data Science on a mission to delve deep into the world of data science.</p>
+                <h2>Python Developer</h2>
+                <p>Experienced Python Developer with expertise in web development, data analysis, and automation. Skilled in using Python libraries like Django, Flask, Pandas, and NumPy. Proficient in problem-solving and creating impactful solutions through code.</p>
             </div>
+            <a href="about.html" class="btn btn-secondary">About Me</a>
             <a href="https://www.linkedin.com/in/aadarshchaudhary/" class="btn btn-secondary" target="_blank">
                 Connect With Me
             </a>
@@ -154,7 +135,39 @@
             </ul>
         </div>
     </section>
-
+    <section id="skills" class="section skills-container container">
+        <h2>Skills</h2>
+        <div class="skill">
+          <p>Python</p>
+          <div class="progress-bar"><div style="width: 90%;"></div></div>
+        </div>
+        <div class="skill">
+            <p>HTML</p>
+            <div class="progress-bar"><div style="width: 90%;"></div></div>
+        </div>
+        <div class="skill">
+            <p>CSS</p>
+            <div class="progress-bar"><div style="width: 90%;"></div></div>
+        </div>
+        <div class="skill">
+            <p>Postgre SQL</p>
+            <div class="progress-bar"><div style="width: 90%;"></div></div>
+        </div>
+        <div class="skill">
+            <p>Machine Learning</p>
+            <div class="progress-bar"><div style="width: 80%;"></div></div>
+        </div>
+        <div class="skill">
+          <p>Django</p>
+          <div class="progress-bar"><div style="width: 75%;"></div></div>
+        </div>
+        <div class="skill">
+            <p>Flask</p>
+            <div class="progress-bar"><div style="width: 75%;"></div></div>
+        </div>
+        <!-- Repeat for other skills -->
+      </section>
+      
     <!-- Experience Section -->
     <section id="experience" class="section experience-container container">
         <div class="division"></div>
@@ -183,36 +196,66 @@
         </div>
 
         <div class="grid grid-3">
-            <div class="project-card card-shadow">
+            <div class="project-card card-shadow" style="background-image: url('../assets/project/project-1.jpg');">
                 <div class="project-info">
-                    <h3>Stock Prediction with Trading</h3>
-                    <h4>Numpy, Pandas, Scikit-learn, VectorBt, Alpaca</h4>
+                  <h3>Stock Prediction with Trading</h3>
+                  <h4>Flask, Numpy, Pandas, Scikit-learn, VectorBt, Alpaca</h4>
                 </div>
                 <div class="project-links">
                     <a href="https://stock-trading-with-backtesting.onrender.com" class="btn btn-secondary" target="_blank">Live Demo</a>
                     <a href="https://github.com/AdrshChaudhary/Stock_Trading_with_Backtesting" class="btn btn-secondary" target="_blank">GitHub</a>
+                    <a href="javascript:void(0);" onclick="openModal('stockProject')" class="btn btn-secondary">Read More</a>
                 </div>
             </div>
-
-            <div class="project-card card-shadow">
+              
+            <!-- Project Detail Modal -->
+            <div id="stockProject" class="modal">
+                <div class="modal-content">
+                  <span onclick="closeModal('stockProject')" class="close">&times;</span>
+                  <h3>Stock Prediction with Trading</h3>
+                  <p>The Stock Trading with Backtesting project provides a robust framework for algorithmic trading and backtesting strategies using Python. This web application allows users to analyze and simulate trading strategies with historical market data. It also allows user to do paper trading on Alpaca.</p>
+                </div>
+            </div>
+            </div>
+            <div class="project-card card-shadow" style="background-image: url('../assets/project/project-2.jpg');">
                 <div class="project-info">
-                    <h3>Credit Card Fraud Detection</h3>
-                    <h4>Numpy, Pandas, Scikit-learn</h4>
+                  <h3>Credit Card Fraud Detection</h3>
+                  <h4>Numpy, Pandas, Scikit-learn</h4>
                 </div>
                 <div class="project-links">
                     <a href="" class="btn btn-secondary" target="_blank">Live Demo</a>
                     <a href="https://github.com/AdrshChaudhary/credit-card-fraud-detection" class="btn btn-secondary" target="_blank">GitHub</a>
+                    <a href="javascript:void(0);" onclick="openModal('ccfraudProject')" class="btn btn-secondary">Read More</a>
+                </div>
+            </div>
+              
+            <!-- Project Detail Modal -->
+            <div id="ccfraudProject" class="modal">
+                <div class="modal-content">
+                  <span onclick="closeModal('ccfraudProject')" class="close">&times;</span>
+                  <h3>Credit Card Fraud Detection</h3>
+                  <p>Project details, your approach, challenges, and key results go here...</p>
                 </div>
             </div>
 
-            <div class="project-card card-shadow">
+            <div class="project-card card-shadow" style="background-image: url('../assets/project/project-3.jpg');">
                 <div class="project-info">
-                    <h3>Super Market Sales Prediction</h3>
-                    <h4>Numpy, Pandas, Matplotlib, Scipy, Seaborn, Scikit-learn</h4>
+                  <h3>Super Market Sales Prediction</h3>
+                  <h4>Numpy, Pandas, Matplotlib, Scipy, Seaborn, Scikit-learn</h4>
                 </div>
                 <div class="project-links">
                     <a href="" class="btn btn-secondary" target="_blank">Live Demo</a>
                     <a href="https://github.com/AdrshChaudhary/Supermarket-sales-prediction" class="btn btn-secondary" target="_blank">GitHub</a>
+                    <a href="javascript:void(0);" onclick="openModal('supermktProject')" class="btn btn-secondary">Read More</a>
+                </div>
+            </div>
+              
+            <!-- Project Detail Modal -->
+            <div id="supermktProject" class="modal">
+                <div class="modal-content">
+                  <span onclick="closeModal('supermktProject')" class="close">&times;</span>
+                  <h3>Super Market Sales Prediction</h3>
+                  <p>Project details, your approach, challenges, and key results go here...</p>
                 </div>
             </div>
         </div>
